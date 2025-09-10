@@ -1,3 +1,3 @@
 'use strict';
-const { createCoreService } = require('@strapi/strapi').factories;
-module.exports = createCoreService('api::listing.listing');
+const { createCoreController } = require('@strapi/strapi').factories;
+module.exports = createCoreController('api::listing.listing');
