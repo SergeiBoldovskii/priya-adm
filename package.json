@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "scripts": {
+  "scripts": 
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build"
