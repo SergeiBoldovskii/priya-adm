@@ -1,11 +1,9 @@
 {
-  "name": "highrise-cms",
+  "name": "priya-adm",
   "version": "1.0.0",
   "private": true,
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "scripts": 
+  "engines": { "node": ">=18.0.0" },
+  "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build"
