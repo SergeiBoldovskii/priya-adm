@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listings",
+  "info": {
+    "singularName": "listing",
+    "pluralName": "listings",
+    "displayName": "Listing"
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "city": {
+      "type": "enumeration",
+      "enum": [
+        "Bangkok",
+        "Pattaya",
+        "Phuket"
+      ]
+    },
+    "district": {
+      "type": "string"
+    },
+    "bedrooms": {
+      "type": "integer"
+    },
+    "floor": {
+      "type": "integer"
+    },
+    "area": {
+      "type": "integer"
+    },
+    "view": {
+      "type": "enumeration",
+      "enum": [
+        "Sea",
+        "City",
+        "Green",
+        "Pool"
+      ]
+    },
+    "priceTHB": {
+      "type": "integer"
+    },
+    "for": {
+      "type": "enumeration",
+      "enum": [
+        "Sale",
+        "Rent"
+      ]
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "feature.feature"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo"
+    }
+  }
+}
