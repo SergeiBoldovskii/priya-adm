@@ -1,7 +1,11 @@
 {
   "kind": "collectionType",
   "collectionName": "listings",
-  "info": { "singularName": "listing", "pluralName": "listings", "displayName": "Listing" },
+  "info": {
+    "singularName": "listing",
+    "pluralName": "listings",
+    "displayName": "Listing"
+  },
   "options": { "draftAndPublish": true },
   "attributes": {
     "title": { "type": "string", "required": true },
