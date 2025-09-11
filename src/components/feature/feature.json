@@ -1,12 +1,8 @@
 {
-  "collectionName": "components_feature_features",
-  "info": {
-    "displayName": "feature"
-  },
+  "collectionName": "components_feature_feature",
+  "info": { "displayName": "Feature" },
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
-    }
+    "label": { "type": "string", "required": true },
+    "value": { "type": "string" }
   }
 }

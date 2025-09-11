@@ -1,1 +1,4 @@
-module.exports=({env})=>({host:env('HOST','0.0.0.0'),port:env.int('PORT',8080),app:{keys:(env('APP_KEYS')||'a,b,c,d').split(',')}});
+module.exports = ({ env }) => ({
+  url: env('PUBLIC_URL'),
+  app: { keys: env.array('APP_KEYS', []) },
+});

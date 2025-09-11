@@ -6,6 +6,9 @@
     "pluralName": "listings",
     "displayName": "Listing"
   },
+  "options": {
+    "draftAndPublish": true
+  },
   "pluginOptions": {
     "i18n": {
       "localized": true
@@ -14,65 +17,38 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "required": true
     },
     "slug": {
       "type": "uid",
       "targetField": "title",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "required": true,
+      "unique": true
     },
-    "city": {
+    "summary": {
+      "type": "text"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "currency": {
       "type": "enumeration",
       "enum": [
-        "Bangkok",
-        "Pattaya",
-        "Phuket"
+        "USD",
+        "RUB",
+        "THB"
+      ],
+      "default": "USD"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
       ]
-    },
-    "district": {
-      "type": "string"
-    },
-    "bedrooms": {
-      "type": "integer"
-    },
-    "floor": {
-      "type": "integer"
-    },
-    "area": {
-      "type": "integer"
-    },
-    "view": {
-      "type": "enumeration",
-      "enum": [
-        "Sea",
-        "City",
-        "Green",
-        "Pool"
-      ]
-    },
-    "priceTHB": {
-      "type": "integer"
-    },
-    "for": {
-      "type": "enumeration",
-      "enum": [
-        "Sale",
-        "Rent"
-      ]
-    },
-    "features": {
-      "type": "component",
-      "repeatable": true,
-      "component": "feature.feature"
     },
     "gallery": {
       "type": "media",
@@ -80,6 +56,17 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "listings"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "feature.feature"
     },
     "seo": {
       "type": "component",
