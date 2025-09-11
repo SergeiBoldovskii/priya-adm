@@ -2,15 +2,23 @@
   "name": "priya-adm",
   "version": "1.0.0",
   "private": true,
-  "engines": { "node": ">=18.0.0" },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build"
   },
   "dependencies": {
-    "@strapi/strapi": "^4.24.0",
     "@strapi/plugin-i18n": "^4.24.0",
-    "pg": "^8.11.3"
+    "@strapi/strapi": "^4.24.0",
+    "better-sqlite3": "^12.2.0",
+    "pg": "^8.11.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^5.3.4",
+    "sqlite3": "^5.1.7",
+    "styled-components": "^5.3.11"
   }
 }
